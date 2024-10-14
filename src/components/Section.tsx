@@ -4,6 +4,7 @@ type SectionProps = React.HTMLAttributes<HTMLDivElement> & {
 	id: string;
 	children: React.ReactNode;
 	dark: boolean;
+	innerClass?: string;
 };
 
 const Section: React.FC<SectionProps> = ({
@@ -11,6 +12,7 @@ const Section: React.FC<SectionProps> = ({
 	dark,
 	children,
 	className,
+	innerClass,
 	...sectionProps
 }) => {
 	return (
@@ -22,7 +24,7 @@ const Section: React.FC<SectionProps> = ({
 			})}
 			{...sectionProps}
 		>
-			<div className='md:max-w-5xl md:mx-auto'>{children}</div>
+			<div className={cn('md:max-w-5xl md:mx-auto', innerClass)}>{children}</div>
 		</section>
 	);
 };

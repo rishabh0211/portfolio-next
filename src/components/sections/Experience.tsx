@@ -93,22 +93,29 @@ const JOBS = [
 const Experience = () => {
 	const [activeJob, setActiveJob] = useState(JOBS[0]);
 	return (
-		<Section id='jobs' dark={false}>
-			<Heading heading='Professional Experience' className='text-xl' />
-			<div className='mt-8'>
-				<ul className='w-full flex overflow-x-auto border-b-2 border-foreground'>
+		<Section id='jobs' innerClass='md:max-w-2xl p-2' dark={false}>
+			<Heading
+				heading='Professional Experience'
+				className='text-xl md:flex md:justify-center'
+			/>
+			<div className='mt-8 md:flex md:gap-12 md:mt-16 md:overflow-x-visible'>
+				<ul className='w-full flex overflow-x-auto border-b-2 border-foreground md:block md:border-b-0 md:border-l-2  md:w-max md:flex-shrink-0 md:relative'>
 					{JOBS.map((job) => job.company).map((company) => (
 						<li
 							key={company}
-							className={cn('text-nowrap py-2 px-4 text-sm cursor-pointer', {
-								'bg-accent-foreground text-accent': activeJob.company === company,
-							})}
+							className={cn(
+								'text-nowrap h-10 px-4 flex items-center text-sm cursor-pointer',
+								{
+									'bg-accent-foreground text-accent': activeJob.company === company,
+								}
+							)}
 						>
 							{company}
 						</li>
 					))}
+					<div className='block rounded-md h-10 absolute top-10 w-1 -left-[3px] bg-accent z-20 transition-all duration-300'></div>
 				</ul>
-				<div className='mt-6'>
+				<div className='mt-6 md:mt-0'>
 					{activeJob.role} <span className='text-accent'>@{activeJob.company}</span>
 					<ul className='list-disc mt-4 px-4'>
 						{activeJob.description.map((desc) => (
