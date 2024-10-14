@@ -95,16 +95,16 @@ const Experience = () => {
 		<section id='jobs' className='pt-20 pb-24 px-5 bg-background_light'>
 			<Heading heading='Professional Experience' className='text-xl' />
 			<div className='mt-8'>
-				<ul className='w-full flex overflow-x-scroll border-b-2 border-foreground'>
+				<ul className='w-full flex overflow-x-auto border-b-2 border-foreground'>
 					{JOBS.map((job) => job.company).map((company) => (
-						<p
+						<li
 							key={company}
 							className={cn('text-nowrap py-2 px-4 text-sm', {
 								'bg-accent-foreground text-accent': activeJob.company === company,
 							})}
 						>
 							{company}
-						</p>
+						</li>
 					))}
 				</ul>
 				<div className='mt-6'>
