@@ -40,7 +40,7 @@ const config: Config = {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))',
+					foreground: 'hsl(var(--accent-foreground) / 0.3)',
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
