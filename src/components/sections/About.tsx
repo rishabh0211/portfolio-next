@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Heading from '@/components/ui/heading';
 import heroImg from '@/images/hero.jpeg';
+import Section from '../Section';
 
 const SKILLS = [
 	'Javascript (ES6+)',
@@ -29,7 +30,7 @@ const SKILLS = [
 
 const About = () => {
 	return (
-		<section id='about' className='pt-44 pb-20 px-5 -mt-24 bg-background_dark'>
+		<Section id='about' className='pt-32 -mt-16' dark>
 			<div>
 				<Heading heading='about me' />
 				<p className='my-4'>
@@ -69,7 +70,7 @@ const About = () => {
 					))}
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 };
 

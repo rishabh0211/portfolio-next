@@ -1,12 +1,15 @@
 'use client';
+import Section from '../Section';
 import { Button } from '../ui/button';
 import Heading from '../ui/heading';
 
 const Hero = () => {
 	return (
-		<section
+		<Section
 			id='hero'
-			className='bg-background_light text-foreground px-6 py-32 md:px-16 md:py-48 clip-path-hero'
+			// className='bg-background_light text-foreground px-6 py-32 md:px-16 md:py-48 clip-path-hero'
+			className='pt-32 pb-28 clip-path-hero'
+			dark={false}
 		>
 			<div className='max-w-4xl mx-auto'>
 				<Heading heading='Hello' />
@@ -31,7 +34,7 @@ const Hero = () => {
 					</Button>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 };
 
