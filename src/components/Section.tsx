@@ -3,12 +3,12 @@ import { cn } from '@/lib/utils';
 type SectionProps = React.HTMLAttributes<HTMLDivElement> & {
 	id: string;
 	children: React.ReactNode;
-	dark?: boolean;
+	dark: boolean;
 };
 
 const Section: React.FC<SectionProps> = ({
 	id,
-	dark = false,
+	dark,
 	children,
 	className,
 	...sectionProps
@@ -22,7 +22,7 @@ const Section: React.FC<SectionProps> = ({
 			})}
 			{...sectionProps}
 		>
-			{children}
+			<div className='md:max-w-5xl md:mx-auto'>{children}</div>
 		</section>
 	);
 };

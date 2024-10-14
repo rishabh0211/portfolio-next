@@ -4,6 +4,7 @@ import Heading from '@/components/ui/heading';
 import neighborhoodsImg from '@/images/neighborhoods.png';
 import caroobiImg from '@/images/caroobi.png';
 import Image from 'next/image';
+import Section from '../Section';
 
 const PROJECTS = [
 	{
@@ -22,7 +23,7 @@ const PROJECTS = [
 
 const Projects = () => {
 	return (
-		<section className='pt-20 pb-20 px-5 bg-background_dark'>
+		<Section id='projects' dark>
 			<Heading heading='Some of my work' className='flex justify-center text-xl' />
 			<p className='mt-4'>
 				Following are some of the projects I've been part of or have made entirely from
@@ -58,7 +59,7 @@ const Projects = () => {
 					</div>
 				))}
 			</div>
-		</section>
+		</Section>
 	);
 };
 

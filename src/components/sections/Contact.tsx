@@ -14,6 +14,7 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Label } from '../ui/label';
 import { Button } from '../ui/button';
+import Section from '../Section';
 
 const data = [
 	{
@@ -45,7 +46,7 @@ const data = [
 
 const Contact = () => {
 	return (
-		<section id='contact' className='pt-20 pb-24 px-5 bg-background_light'>
+		<Section id='contact' dark={false}>
 			<Heading heading='get in touch' className='text-xl' />
 			<div className='flex gap-2 mt-3 items-center'>
 				<AiOutlineMail className='scale-125' />
@@ -82,7 +83,7 @@ const Contact = () => {
 				</div>
 				<Button className='mt-4 w-full rounded-md'>Submit</Button>
 			</form>
-		</section>
+		</Section>
 	);
 };
 

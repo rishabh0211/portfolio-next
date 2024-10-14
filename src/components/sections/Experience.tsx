@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Heading from '../ui/heading';
 import { cn } from '@/lib/utils';
+import Section from '../Section';
 
 const JOBS = [
 	{
@@ -92,7 +93,7 @@ const JOBS = [
 const Experience = () => {
 	const [activeJob, setActiveJob] = useState(JOBS[0]);
 	return (
-		<section id='jobs' className='pt-20 pb-24 px-5 bg-background_light'>
+		<Section id='jobs' dark={false}>
 			<Heading heading='Professional Experience' className='text-xl' />
 			<div className='mt-8'>
 				<ul className='w-full flex overflow-x-auto border-b-2 border-foreground'>
@@ -116,7 +117,7 @@ const Experience = () => {
 					</ul>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 };
 
