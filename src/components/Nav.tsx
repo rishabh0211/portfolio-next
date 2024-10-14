@@ -46,7 +46,7 @@ const Nav = () => {
 	};
 
 	return (
-		<header className='w-full sticky top-0 z-10 flex justify-between px-10 py-6 bg-background_light shadow-lg place-content-center md:py-6'>
+		<header className='w-full sticky top-0 z-20 flex justify-between px-10 py-6 bg-background_light shadow-lg place-content-center md:py-6'>
 			<div className=''>
 				<Image src={logo} height={24} width={24} alt='logo' />
 			</div>
