@@ -99,7 +99,7 @@ const Experience = () => {
 					{JOBS.map((job) => job.company).map((company) => (
 						<li
 							key={company}
-							className={cn('text-nowrap py-2 px-4 text-sm', {
+							className={cn('text-nowrap py-2 px-4 text-sm cursor-pointer', {
 								'bg-accent-foreground text-accent': activeJob.company === company,
 							})}
 						>
