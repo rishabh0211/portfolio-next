@@ -5,6 +5,7 @@ import neighborhoodsImg from '@/images/neighborhoods.png';
 import caroobiImg from '@/images/caroobi.png';
 import Image from 'next/image';
 import Section from '../Section';
+import { cn } from '@/lib/utils';
 
 const PROJECTS = [
 	{
@@ -38,26 +39,44 @@ const Projects = () => {
 				profile.
 			</p>
 			<div className=''>
-				{PROJECTS.map(({ desc, img, name, skills }) => (
-					<div className='relative mt-8 shadow-2xl'>
-						<div className='py-8 px-6 relative z-10'>
-							<p className='text-xl'>{name}</p>
-							<p className='mt-4 p-4 text-sm bg-zinc-800'>{desc}</p>
-							<ul className='mt-4 flex items-center gap-2 text-xs'>
-								{skills.map((skill) => (
-									<li className='capitalize bg-zinc-800 text-accent py-2 px-3 rounded'>
-										{skill}
-									</li>
-								))}
-							</ul>
+				{PROJECTS.map(({ desc, img, name, skills }, index) => {
+					const isEven = index % 2 == 0;
+					return (
+						<div className='relative mt-20 shadow-2xl md:grid md:grid-cols-12 md:gap-2 md:shadow-none'>
+							<div
+								className={cn('py-8 px-6 relative z-10', {
+									'md:col-start-1 md:col-end-7': isEven,
+									'md:col-start-7 md:col-end-13 md:text-right': !isEven,
+								})}
+							>
+								<p className='text-xl'>{name}</p>
+								<p className='mt-4 p-4 text-sm bg-zinc-800'>{desc}</p>
+								<ul
+									className={cn('mt-4 flex items-center gap-2 text-xs', {
+										'justify-end': !isEven,
+									})}
+								>
+									{skills.map((skill) => (
+										<li className='capitalize bg-zinc-800 text-accent py-2 px-3 rounded'>
+											{skill}
+										</li>
+									))}
+								</ul>
+							</div>
+							<Image
+								src={img}
+								alt={name}
+								className={cn(
+									'absolute top-0 right-0 bottom-0 left-0 w-full h-full object-cover opacity-20',
+									{
+										'md:col-start-6 md:col-end-13': isEven,
+										'md:col-start-1 md:col-end-8': !isEven,
+									}
+								)}
+							/>
 						</div>
-						<Image
-							src={img}
-							alt={name}
-							className='absolute top-0 right-0 bottom-0 left-0 w-full h-full object-cover opacity-20'
-						/>
-					</div>
-				))}
+					);
+				})}
 			</div>
 		</Section>
 	);
