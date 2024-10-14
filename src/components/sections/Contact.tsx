@@ -10,6 +10,10 @@ import {
 import Link from 'next/link';
 import { GoLocation } from 'react-icons/go';
 import { AiOutlineMail } from 'react-icons/ai';
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
+import { Label } from '../ui/label';
+import { Button } from '../ui/button';
 
 const data = [
 	{
@@ -41,7 +45,7 @@ const data = [
 
 const Contact = () => {
 	return (
-		<section className='pt-20 pb-24 px-5 bg-background_light'>
+		<section id='contact' className='pt-20 pb-24 px-5 bg-background_light'>
 			<Heading heading='get in touch' className='text-xl' />
 			<div className='flex gap-2 mt-3 items-center'>
 				<AiOutlineMail className='scale-125' />
@@ -58,6 +62,26 @@ const Contact = () => {
 					</Link>
 				))}
 			</div>
+			<form className='mt-16 p-6 bg-background_dark'>
+				<div>
+					<Label htmlFor='name'>Name</Label>
+					<Input id='name' placeholder='Your name' className='mt-1' />
+				</div>
+				<div className='mt-4'>
+					<Label htmlFor='email'>E-mail</Label>
+					<Input id='email' placeholder='Your email' className='mt-1' />
+				</div>
+				<div className='mt-4'>
+					<Label htmlFor='message'>Message</Label>
+					<Textarea
+						id='message'
+						placeholder='Your Message/Query'
+						className='mt-1 resize-none'
+						rows={4}
+					/>
+				</div>
+				<Button className='mt-4 w-full rounded-md'>Submit</Button>
+			</form>
 		</section>
 	);
 };
