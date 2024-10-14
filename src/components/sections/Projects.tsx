@@ -42,16 +42,18 @@ const Projects = () => {
 						<div className='py-8 px-6 relative z-10'>
 							<p className='text-xl'>{name}</p>
 							<p className='mt-4 p-4 text-sm bg-zinc-800'>{desc}</p>
-							<ul className='mt-4 flex items-center gap-4 text-sm'>
+							<ul className='mt-4 flex items-center gap-2 text-xs'>
 								{skills.map((skill) => (
-									<li className='uppercase'>{skill}</li>
+									<li className='capitalize bg-zinc-800 text-accent py-2 px-3 rounded'>
+										{skill}
+									</li>
 								))}
 							</ul>
 						</div>
 						<Image
 							src={img}
 							alt={name}
-							className='absolute top-0 right-0 bottom-0 left-0 w-full h-full object-cover opacity-10'
+							className='absolute top-0 right-0 bottom-0 left-0 w-full h-full object-cover opacity-20'
 						/>
 					</div>
 				))}
