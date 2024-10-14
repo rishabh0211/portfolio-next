@@ -2,14 +2,21 @@ import Link from 'next/link';
 
 import Heading from '@/components/ui/heading';
 import neighborhoodsImg from '@/images/neighborhoods.png';
+import caroobiImg from '@/images/caroobi.png';
 import Image from 'next/image';
 
 const PROJECTS = [
 	{
 		name: 'Neighborhoods',
-		desc: `This is a server side rendered app for the end customers. The customers can come and fill some information about themselves and their car and they'd be matched to a relavant mechanic. The site has different funnels varying according to the services.`,
+		desc: `This is a web application with customers in the United States. It's a place where customers would find their homes. It has a listings of available homes and the information about the neighborhoods and people can come and search for the properties.`,
 		img: neighborhoodsImg,
 		skills: ['react', 'typescript', 'redux-toolkit'],
+	},
+	{
+		name: 'Caroobi',
+		desc: `This is a server side rendered app for the end customers. The customers can come and fill some information about themselves and their car and they'd be matched to a relavant mechanic. The site has different funnels varying according to the services.`,
+		img: caroobiImg,
+		skills: ['Javascript', 'Typescript', 'React'],
 	},
 ];
 
@@ -29,9 +36,9 @@ const Projects = () => {
 				</Link>{' '}
 				profile.
 			</p>
-			<div className='mt-6 '>
+			<div className=''>
 				{PROJECTS.map(({ desc, img, name, skills }) => (
-					<div className='relative'>
+					<div className='relative mt-8 shadow-2xl'>
 						<div className='py-8 px-6 relative z-10'>
 							<p className='text-xl'>{name}</p>
 							<p className='mt-4 p-4 text-sm bg-zinc-800'>{desc}</p>
