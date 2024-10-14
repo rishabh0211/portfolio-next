@@ -46,24 +46,26 @@ const data = [
 
 const Contact = () => {
 	return (
-		<Section id='contact' dark={false}>
-			<Heading heading='get in touch' className='text-xl' />
-			<div className='flex gap-2 mt-3 items-center'>
-				<AiOutlineMail className='scale-125' />
-				<p>rishabh0211@gmail.com</p>
+		<Section id='contact' innerClass='md:max-w-3xl md:flex md:gap-8' dark={false}>
+			<div className='md:w-1/3 md:flex-shrink-0'>
+				<Heading heading='get in touch' className='text-xl' />
+				<div className='flex gap-2 mt-3 items-center'>
+					<AiOutlineMail className='scale-125' />
+					<p>rishabh0211@gmail.com</p>
+				</div>
+				<div className='flex gap-2 mt-3 items-center'>
+					<GoLocation className='scale-110' />
+					<p>New Delhi, India</p>
+				</div>
+				<div className='mt-4 flex gap-4'>
+					{data.map(({ icon, id, url }) => (
+						<Link href={url} target='_blank' key={id} className='scale-125'>
+							{icon}
+						</Link>
+					))}
+				</div>
 			</div>
-			<div className='flex gap-2 mt-3 items-center'>
-				<GoLocation className='scale-110' />
-				<p>New Delhi, India</p>
-			</div>
-			<div className='mt-4 flex gap-4'>
-				{data.map(({ icon, id, url }) => (
-					<Link href={url} target='_blank' key={id} className='scale-125'>
-						{icon}
-					</Link>
-				))}
-			</div>
-			<form className='mt-16 p-6 bg-background_dark'>
+			<form className='mt-16 p-6 bg-background_dark md:flex-grow md:mt-0'>
 				<div>
 					<Label htmlFor='name'>Name</Label>
 					<Input id='name' placeholder='Your name' className='mt-1' />
