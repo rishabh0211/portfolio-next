@@ -8,6 +8,11 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			spacing: {
+				30: '7.5rem',
+				50: '12.5rem',
+				70: '17.5rem',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -141,5 +146,6 @@ const config: Config = {
 	},
 	darkMode: ['class'],
 	plugins: [require('tailwindcss-animate')],
+	// safelist: ['top-30', 'top-50', 'top-70', 'top-90'],
 };
 export default config;

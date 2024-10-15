@@ -4,7 +4,23 @@ import Heading from '../ui/heading';
 import { cn } from '@/lib/utils';
 import Section from '../Section';
 
-const JOBS = [
+type Job = {
+	company: string;
+	role: string;
+	description: string[];
+};
+const topClasses = [
+	'top-0',
+	'top-10',
+	'top-20',
+	'top-30',
+	'top-40',
+	'top-50',
+	'top-60',
+	'top-70',
+	'top-80',
+];
+const JOBS: Job[] = [
 	{
 		company: 'BåerKarrer',
 		role: 'Sr. Frontend Developer',
@@ -91,7 +107,16 @@ const JOBS = [
 ];
 
 const Experience = () => {
-	const [activeJob, setActiveJob] = useState(JOBS[0]);
+	const [activeJobIndex, setActiveJobIndex] = useState<number>(0);
+
+	const handleJobClick = (company: string) => {
+		const jobIndex = JOBS.findIndex((job) => job.company === company)!;
+		setActiveJobIndex(jobIndex);
+	};
+
+	const activeJob = JOBS[activeJobIndex];
+	const topClass = topClasses[activeJobIndex];
+
 	return (
 		<Section id='jobs' innerClass='md:max-w-2xl p-2' dark={false}>
 			<Heading
@@ -99,7 +124,7 @@ const Experience = () => {
 				className='text-xl md:flex md:justify-center'
 			/>
 			<div className='mt-8 md:flex md:gap-12 md:mt-16 md:overflow-x-visible'>
-				<ul className='w-full flex overflow-x-auto border-b-2 border-foreground md:block md:border-b-0 md:border-l-2  md:w-max md:flex-shrink-0 md:relative'>
+				<ul className='w-full flex border-b-2 border-foreground md:block md:border-b-0 md:border-l-[1px]  md:w-max md:flex-shrink-0 md:relative'>
 					{JOBS.map((job) => job.company).map((company) => (
 						<li
 							key={company}
@@ -109,11 +134,17 @@ const Experience = () => {
 									'bg-accent-foreground text-accent': activeJob.company === company,
 								}
 							)}
+							onClick={() => handleJobClick(company)}
 						>
 							{company}
 						</li>
 					))}
-					<div className='block rounded-md h-10 absolute top-10 w-1 -left-[3px] bg-accent z-20 transition-all duration-300'></div>
+					<div
+						className={cn(
+							'block rounded-md h-10 absolute w-1 -left-[2.7px] bg-accent z-20 transition-all duration-300',
+							topClass
+						)}
+					></div>
 				</ul>
 				<div className='mt-6 md:mt-0'>
 					{activeJob.role} <span className='text-accent'>@{activeJob.company}</span>

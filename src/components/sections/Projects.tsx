@@ -42,7 +42,10 @@ const Projects = () => {
 				{PROJECTS.map(({ desc, img, name, skills }, index) => {
 					const isEven = index % 2 == 0;
 					return (
-						<div className='relative mt-20 shadow-2xl md:grid md:grid-cols-12 md:gap-2 md:shadow-none'>
+						<div
+							key={name}
+							className='relative mt-20 shadow-2xl md:grid md:grid-cols-12 md:gap-2 md:shadow-none'
+						>
 							<div
 								className={cn('py-8 px-6 relative z-10', {
 									'md:col-start-1 md:col-end-7': isEven,
@@ -57,7 +60,10 @@ const Projects = () => {
 									})}
 								>
 									{skills.map((skill) => (
-										<li className='capitalize bg-zinc-800 text-accent py-2 px-3 rounded'>
+										<li
+											key={skill}
+											className='capitalize bg-zinc-800 text-accent py-2 px-3 rounded'
+										>
 											{skill}
 										</li>
 									))}
