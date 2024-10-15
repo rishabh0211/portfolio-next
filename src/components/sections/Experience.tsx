@@ -53,7 +53,7 @@ const Experience = () => {
 					))}
 					<div
 						className={cn(
-							'block rounded-md h-10 absolute w-1 -left-[2.7px] bg-accent z-20 transition-all duration-300',
+							'block rounded-md h-10 absolute w-1 -left-[2.7px] bg-accent z-10 transition-all duration-300',
 							topClass
 						)}
 					></div>

@@ -1,26 +1,10 @@
 import Link from 'next/link';
 
 import Heading from '@/components/ui/heading';
-import neighborhoodsImg from '@/images/neighborhoods.png';
-import caroobiImg from '@/images/caroobi.png';
 import Image from 'next/image';
 import Section from '../Section';
 import { cn } from '@/lib/utils';
-
-const PROJECTS = [
-	{
-		name: 'Neighborhoods',
-		desc: `This is a web application with customers in the United States. It's a place where customers would find their homes. It has a listings of available homes and the information about the neighborhoods and people can come and search for the properties.`,
-		img: neighborhoodsImg,
-		skills: ['react', 'typescript', 'redux-toolkit'],
-	},
-	{
-		name: 'Caroobi',
-		desc: `This is a server side rendered app for the end customers. The customers can come and fill some information about themselves and their car and they'd be matched to a relavant mechanic. The site has different funnels varying according to the services.`,
-		img: caroobiImg,
-		skills: ['Javascript', 'Typescript', 'React'],
-	},
-];
+import PROJECTS from '@/content/projects';
 
 const Projects = () => {
 	return (
