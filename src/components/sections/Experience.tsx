@@ -124,14 +124,15 @@ const Experience = () => {
 				className='text-xl md:flex md:justify-center'
 			/>
 			<div className='mt-8 md:flex md:gap-12 md:mt-16 md:overflow-x-visible'>
-				<ul className='w-full flex border-b-2 border-foreground md:block md:border-b-0 md:border-l-[1px]  md:w-max md:flex-shrink-0 md:relative'>
+				<ul className='w-full flex overflow-x-auto border-b-2 border-foreground md:block md:overflow-x-visible md:border-b-0 md:border-l-[1px] md:w-max md:flex-shrink-0 md:relative'>
 					{JOBS.map((job) => job.company).map((company) => (
 						<li
 							key={company}
 							className={cn(
-								'text-nowrap h-10 px-4 flex items-center text-sm cursor-pointer',
+								'relative text-nowrap h-10 px-4 flex items-center text-sm cursor-pointer  md:after:content-normal md:after:absolute md:after:top-0 md:after:right-0 md:after:bottom-0 md:after:left-0 md:after:bg-accent-foreground md:after:w-0 md:after:transition-all md:after:duration-300 md:hover:after:w-full',
 								{
-									'bg-accent-foreground text-accent': activeJob.company === company,
+									'bg-accent-foreground text-accent md:bg-background_light':
+										activeJob.company === company,
 								}
 							)}
 							onClick={() => handleJobClick(company)}
