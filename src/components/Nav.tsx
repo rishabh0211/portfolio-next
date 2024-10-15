@@ -52,7 +52,7 @@ const Nav = () => {
 			</div>
 			{/* Mobile Burger Icon */}
 			<div className='md:hidden'>
-				<div className='w-10 relative z-20' onClick={handleMenuClick}>
+				<div className='w-10 h-[1.7rem] relative z-20' onClick={handleMenuClick}>
 					<div
 						className={cn('h-[3px] w-full bg-accent rounded absolute top-0', {
 							'animate-line1': menuOpen,

@@ -19,27 +19,27 @@ import Section from '../Section';
 const data = [
 	{
 		id: 1,
-		icon: <FaGithubSquare className='social-icon'></FaGithubSquare>,
+		icon: <FaGithubSquare />,
 		url: 'https://github.com/rishabh0211',
 	},
 	{
 		id: 2,
-		icon: <FaLinkedin className='social-icon'></FaLinkedin>,
+		icon: <FaLinkedin />,
 		url: 'https://www.linkedin.com/in/rishabh-rastogi-955868103/',
 	},
 	{
 		id: 3,
-		icon: <FaInstagramSquare className='social-icon'></FaInstagramSquare>,
+		icon: <FaInstagramSquare />,
 		url: 'https://www.instagram.com/rishabh0211/',
 	},
 	{
 		id: 4,
-		icon: <FaStackOverflow className='social-icon'></FaStackOverflow>,
+		icon: <FaStackOverflow />,
 		url: 'https://stackoverflow.com/users/9658693/rishabh0211?tab=profile',
 	},
 	{
 		id: 5,
-		icon: <FaCodepen className='social-icon'></FaCodepen>,
+		icon: <FaCodepen />,
 		url: 'https://codepen.io/rishabh0211',
 	},
 ];
@@ -59,7 +59,12 @@ const Contact = () => {
 				</div>
 				<div className='mt-4 flex gap-4'>
 					{data.map(({ icon, id, url }) => (
-						<Link href={url} target='_blank' key={id} className='scale-125'>
+						<Link
+							href={url}
+							target='_blank'
+							key={id}
+							className='scale-125 md:transition-all md:duration-300 md:hover:text-accent md:hover:scale-150'
+						>
 							{icon}
 						</Link>
 					))}

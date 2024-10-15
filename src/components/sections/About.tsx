@@ -66,11 +66,11 @@ const About = () => {
 					heading='my skills'
 					className='-rotate-90 absolute left-4 top-1/2 -translate-x-1/2'
 				/>
-				<div className='grid grid-cols-2 gap-4 ml-12 mt-10 md:grid-cols-4 md:ml-16'>
+				<ul className='list-disc grid grid-cols-2 gap-4 ml-12 mt-10 md:grid-cols-4 md:ml-16'>
 					{SKILLS.map((skill) => (
-						<p key={skill}>- {skill}</p>
+						<li key={skill}>{skill}</li>
 					))}
-				</div>
+				</ul>
 			</div>
 		</Section>
 	);
