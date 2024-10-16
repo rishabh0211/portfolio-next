@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const useOutsideClick = (callback: () => {}) => {
+const useOutsideClick = (callback: () => void) => {
 	const ref = useRef<HTMLUListElement>(null);
 
 	useEffect(() => {

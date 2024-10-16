@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import Section from '../Section';
 import { Button } from '../ui/button';
 import Heading from '../ui/heading';
@@ -25,13 +26,11 @@ const Hero = () => {
 					<Button size='lg' variant='outline' className='uppercase'>
 						get in touch
 					</Button>
-					<Button
-						size='lg'
-						className='uppercase'
-						onClick={() => console.log('resume clicked')}
-					>
-						resume
-					</Button>
+					<Link href='/resume.pdf' target='_blank'>
+						<Button size='lg' className='uppercase'>
+							resume
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</Section>
