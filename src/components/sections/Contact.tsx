@@ -1,4 +1,3 @@
-import { MailIcon, MapPinIcon } from 'lucide-react';
 import Heading from '../ui/heading';
 import {
 	FaLinkedin,

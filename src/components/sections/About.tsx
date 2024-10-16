@@ -35,19 +35,20 @@ const About = () => {
 				<div>
 					<Heading heading='about me' />
 					<p className='my-4'>
-						Hi! I'm Rishabh, a sofware engineer based in New Delhi, India.
+						Hi! I&apos;m Rishabh, a sofware engineer based in New Delhi, India.
 					</p>
 					<p className='my-4'>
 						A web developer with expertise in front-end development and exposure to
 						back-end development. I enjoy creating interactive and engaging things for the
-						web. I'm always looking for ways to improve and optimise the applications.
+						web. I&apos;m always looking for ways to improve and optimise the
+						applications.
 					</p>
 					<p className='my-4'>
 						I have over 6 years of experience making excellent websites, applications, and
 						everything in between. I write clean, robust, and maintainable code by
-						adhering to best development standards. I've worked for both large
-						corporations and start-up organizations. Below are the few technologies I've
-						worked on:
+						adhering to best development standards. I&apos;ve worked for both large
+						corporations and start-up organizations. Below are the few technologies
+						I&apos;ve worked on:
 					</p>
 				</div>
 				<div className='flex justify-center mt-8 md:mt-0'>

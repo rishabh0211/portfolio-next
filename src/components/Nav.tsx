@@ -1,5 +1,5 @@
 'use client';
-import { MouseEvent, MouseEventHandler, useCallback, useRef, useState } from 'react';
+import { MouseEventHandler, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,14 +18,10 @@ const Nav = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const menuListRef = useRef<HTMLUListElement>(null);
 
-	const handleMenuClick: MouseEventHandler<HTMLDivElement> = useCallback(() => {
-		if (!menuOpen) {
-			document.addEventListener('click', handleClickOutside);
-		} else {
-			document.removeEventListener('click', handleClickOutside);
-		}
-		setMenuOpen((menuOpen) => !menuOpen);
-	}, [menuOpen]);
+	const closeMenu = () => {
+		setMenuOpen(false);
+		document.removeEventListener('click', handleClickOutside);
+	};
 
 	const handleClickOutside = useCallback(
 		(e: Event) => {
@@ -37,13 +33,17 @@ const Nav = () => {
 				closeMenu();
 			}
 		},
-		[menuListRef]
+		[menuListRef, closeMenu]
 	);
 
-	const closeMenu = () => {
-		setMenuOpen(false);
-		document.removeEventListener('click', handleClickOutside);
-	};
+	const handleMenuClick: MouseEventHandler<HTMLDivElement> = useCallback(() => {
+		if (!menuOpen) {
+			document.addEventListener('click', handleClickOutside);
+		} else {
+			document.removeEventListener('click', handleClickOutside);
+		}
+		setMenuOpen((menuOpen) => !menuOpen);
+	}, [menuOpen, handleClickOutside]);
 
 	return (
 		<header className='w-full sticky top-0 z-20 flex justify-between px-10 py-6 bg-background_light shadow-lg place-content-center md:py-6 md:justify-center'>

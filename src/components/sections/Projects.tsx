@@ -11,8 +11,8 @@ const Projects = () => {
 		<Section id='projects' dark>
 			<Heading heading='Some of my work' className='flex justify-center text-xl' />
 			<p className='mt-4'>
-				Following are some of the projects I've been part of or have made entirely from
-				scratch. You can find more on my{' '}
+				Following are some of the projects I&apos;ve been part of or have made entirely
+				from scratch. You can find more on my{' '}
 				<Link
 					href='https://github.com/rishabh0211'
 					target='_blank'
