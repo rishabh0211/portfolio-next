@@ -1,6 +1,6 @@
 'use server';
 import { z } from 'zod';
-import nodemailer from 'nodemailer';
+import nodemailer, { TransportOptions } from 'nodemailer';
 import { google } from 'googleapis';
 
 const OAuth2 = google.auth.OAuth2;
@@ -26,7 +26,6 @@ const createTransporter = async () => {
 	});
 
 	const transporter = nodemailer.createTransport({
-		// @ts-ignore
 		service: 'gmail',
 		auth: {
 			type: 'OAuth2',
@@ -36,7 +35,7 @@ const createTransporter = async () => {
 			clientSecret: process.env.CLIENT_SECRET,
 			refreshToken: process.env.REFRESH_TOKEN,
 		},
-	});
+	} as TransportOptions);
 
 	return transporter;
 };
