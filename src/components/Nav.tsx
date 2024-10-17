@@ -3,7 +3,7 @@ import { MouseEventHandler, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import logo from '@/images/logo.png';
+import logo from '@/images/logo.webp';
 import { cn } from '@/lib/utils';
 
 const LINKS = [

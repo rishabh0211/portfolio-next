@@ -1,10 +1,10 @@
 import { Project } from '@/types/Project';
-import neighborhoodsImg from '@/images/neighborhoods.png';
-import caroobiImg from '@/images/caroobi.png';
-import ffplacesImg from '@/images/55places.png';
-import caroobiMechPortalImg from '@/images/caroobi-wekstat.png';
-import gitProfileViewerlImg from '@/images/gitprofile.png';
-import tMobilelImg from '@/images/t-mobile.png';
+import neighborhoodsImg from '@/images/neighborhoods.webp';
+import caroobiImg from '@/images/caroobi.webp';
+import ffplacesImg from '@/images/55places.webp';
+import caroobiMechPortalImg from '@/images/caroobi-wekstat.webp';
+import gitProfileViewerlImg from '@/images/gitprofile.webp';
+import tMobilelImg from '@/images/t-mobile.webp';
 
 const PROJECTS: Project[] = [
 	{
