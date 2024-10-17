@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
+import { Toaster } from '@/components/ui/toaster';
 
 const poppins = Poppins({
 	weight: ['300', '400', '500', '700', '900'],
@@ -24,6 +25,7 @@ export default function RootLayout({
 			<body className={`${poppins.className} antialiased dark`}>
 				<Nav />
 				{children}
+				<Toaster />
 			</body>
 		</html>
 	);

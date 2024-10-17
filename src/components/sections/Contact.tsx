@@ -9,11 +9,9 @@ import {
 import Link from 'next/link';
 import { GoLocation } from 'react-icons/go';
 import { AiOutlineMail } from 'react-icons/ai';
-import { Input } from '../ui/input';
-import { Textarea } from '../ui/textarea';
-import { Label } from '../ui/label';
-import { Button } from '../ui/button';
+
 import Section from '../Section';
+import ContactForm from '../ContactForm';
 
 const data = [
 	{
@@ -69,26 +67,7 @@ const Contact = () => {
 					))}
 				</div>
 			</div>
-			<form className='mt-16 p-6 bg-background_dark md:flex-grow md:mt-0'>
-				<div>
-					<Label htmlFor='name'>Name</Label>
-					<Input id='name' placeholder='Your name' className='mt-1' />
-				</div>
-				<div className='mt-4'>
-					<Label htmlFor='email'>E-mail</Label>
-					<Input id='email' placeholder='Your email' className='mt-1' />
-				</div>
-				<div className='mt-4'>
-					<Label htmlFor='message'>Message</Label>
-					<Textarea
-						id='message'
-						placeholder='Your Message/Query'
-						className='mt-1 resize-none'
-						rows={4}
-					/>
-				</div>
-				<Button className='mt-4 w-full rounded-md'>Submit</Button>
-			</form>
+			<ContactForm />
 		</Section>
 	);
 };
