@@ -6,12 +6,7 @@ import Heading from '../ui/heading';
 
 const Hero = () => {
 	return (
-		<Section
-			id='hero'
-			// className='bg-background_light text-foreground px-6 py-32 md:px-16 md:py-48 clip-path-hero'
-			className='pt-32 pb-28 clip-path-hero'
-			dark={false}
-		>
+		<Section id='home' className='pt-32 pb-28 clip-path-hero' dark={false}>
 			<div className='max-w-4xl mx-auto'>
 				<Heading heading='Hello' />
 				<h1 className='text-5xl mt-2 tracking-wide md:text-7xl md:font-semibold'>

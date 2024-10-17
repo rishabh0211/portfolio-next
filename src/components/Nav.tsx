@@ -7,7 +7,7 @@ import logo from '@/images/logo.webp';
 import { cn } from '@/lib/utils';
 
 const LINKS = [
-	{ target: '#hero', label: 'Hero' },
+	{ target: '#home', label: 'Home' },
 	{ target: '#about', label: 'About' },
 	{ target: '#jobs', label: 'Experience' },
 	{ target: '#projects', label: 'Projects' },
