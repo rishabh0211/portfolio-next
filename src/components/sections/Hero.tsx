@@ -18,9 +18,11 @@ const Hero = () => {
 					exceptional websites, applications, and everything in between.
 				</p>
 				<div className='flex gap-x-4 mt-16'>
-					<Button size='lg' variant='outline' className='uppercase'>
-						get in touch
-					</Button>
+					<Link href='#contact'>
+						<Button size='lg' variant='outline' className='uppercase'>
+							get in touch
+						</Button>
+					</Link>
 					<Link href='/resume.pdf' target='_blank'>
 						<Button size='lg' className='uppercase'>
 							resume
