@@ -48,7 +48,14 @@ const Nav = () => {
 	return (
 		<header className='w-full sticky top-0 z-20 flex justify-between px-10 py-6 bg-background_light shadow-lg place-content-center md:py-6 md:justify-center'>
 			<Link className='md:absolute md:left-10' href='/'>
-				<Image src={logo} height={24} width={24} alt='logo' className='md:scale-150' />
+				<Image
+					priority
+					src={logo}
+					height={24}
+					width={24}
+					alt='logo'
+					className='md:scale-150'
+				/>
 			</Link>
 			{/* Mobile Burger Icon */}
 			<div className='md:hidden'>
